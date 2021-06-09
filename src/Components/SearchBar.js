@@ -14,7 +14,7 @@ const SearchBar = ({movies, showResult}) => {
         let searchVal = event.target.value;
         let suggestion = []
 
-        if(searchVal.length > 1){
+        if(searchVal.length > 0){
             suggestion = movies.sort().filter((e) => e.toLowerCase().includes(searchVal.toLowerCase()));
             setDisplay(suggestion.length>0 ?true:false);
         }
@@ -23,7 +23,6 @@ const SearchBar = ({movies, showResult}) => {
     }
 
     const suggestedText = (value) => {
-        console.log(value);
         setSearchState(value);
         setOptions([]);
         document.getElementById("search-input-box").value = value;
