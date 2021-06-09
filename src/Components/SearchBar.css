@@ -1,0 +1,121 @@
+.search-box-container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 40px;
+    background: #353535;
+    z-index: 1;
+}
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    background: #353535;
+    line-height:40px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid lightslategray;
+}
+.search-input{
+    background: #353535;
+    color: #fff;
+    outline: none;
+    border: none;
+    line-height:40px;
+    width: 0px;
+    float: left;
+    font-size:14px;
+    transition: 0.7s ease;
+    font-family:sans-serif;
+}
+
+.dd-menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    color: #ff5722;
+    background: #353535;
+    padding: 12px;
+    border-radius: 8px;
+    float: right;
+    transition: 0.4s ease;
+    border: none;
+    font-weight: bold;
+    position:initial;
+}
+
+
+.dd-element{
+    text-align: center;
+    font-weight: bold;
+    color: ivory;
+    display: table;
+}
+
+.search-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background: #353535;
+    padding: 12px;
+    border-radius: 8px;
+    float: right;
+    color: #ff5722;
+    transition: 0.4s ease;
+    border: none;
+    font-weight: bold;
+}
+
+
+.search-box:hover > .search-input{
+    width: 240px;
+    margin: 0px 8px;
+}
+
+.search-box:enabled {
+    width: 240px;
+    margin: 0px 8px;
+}
+
+.search-input:focus {
+    width: 240px;
+    margin: 0px 8px;
+}
+/* .search-box:hover > .search-btn{
+    background: #424242;
+} */
+.search-input:focus + .search-btn{
+    background: #424242;
+}
+
+.search-btn:hover {
+    cursor:pointer;
+    background: #424242;
+}
+
+.search-options:disabled {
+    display: none;
+}
+
+.search-options{
+    margin: 0 auto;
+    text-align: left;
+    background: rgba(66, 66, 66, .8);
+    width: 500px;
+    display: inline-block;
+    margin-left: 33%;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.search-options li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+}
